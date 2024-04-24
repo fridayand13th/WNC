@@ -1,131 +1,145 @@
-.header{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: top 0.3s ease-in-out;
-    z-index: 9999;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.header.scrolled {
-    top: -60px; 
+.header {
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: top 0.3s ease-in-out;
+  z-index: 9999;
 }
-.head{
-    display: flex;
-    align-items: center;
-    background-color: #d63125;
-    color: #fff;
+.scrolled {
+  display: none;
 }
-.logo{
-    margin: 10px;
+.head {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  background-color: #d63125;
+  color: #fff;
 }
-.brand-name{
-    display: flex;
-    flex-direction: column;
+.logo {
+  margin: 10px;
 }
-.navbar-center{
-    background-color: #ffd11a;
-    text-align: center;
+.brand-name {
+  display: flex;
+  flex-direction: column;
 }
-.list-menu li{
-    display: inline;
-    list-style-type: none;
-    margin: 0 10px 0 10px;
+.navbar-center {
+  height: 40px;
+  background-color: #ffd11a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.menu-item a{
-    text-decoration: none;
-    color: #000;
-    font-size: 22px;
+.list-menu li {
+  display: inline;
+  list-style-type: none;
+  margin: 0 10px 0 10px;
 }
-.container{
-    position: absolute;
-    top: 25%;
-    left:5%;
-    /* width: 100%; */
-    /* background-color: #d63125; */
-    z-index: 999;
+.menu-item a {
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
 }
-.animated-text{
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-}
-.animated-text b{
-    display: inline-block;
-    animation: slide-in 2s linear;
-    animation-fill-mode: forwards;
-}
+.container-fluid {
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
 
-@keyframes slide-in {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
+  /* width: 100%; */
+  /* background-color: #d63125; */
 }
+.animated-text {
+  background-repeat: no-repeat;
+  color: transparent;
+  height: 60px;
+  background-image: linear-gradient(111deg, rgb(14, 13, 12), rgb(13, 13, 11));
+  -webkit-background-clip: text;
+  background-position: -90vw 0;
+  animation: backcolor 6s linear forwards alternate;
+  user-select: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.animated-text h3 {
+  font-size: 3vw;
+
+  font-weight: 600;
+}
+@keyframes backcolor {
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* Slide */
-#slid{
-    position: relative;
-    overflow: hidden;
-    width: calc(100% - 20px); /* Chiều dài bằng toàn bộ trang với margin 10px */
-    /* margin: 10px; */
-    height: 300px;
+#slid {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 20px); /* Chiều dài bằng toàn bộ trang với margin 10px */
+  /* margin: 10px; */
+  height: 500px;
+  margin-bottom: 50px;
 }
 .panel {
-    padding: 50px;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.panel img{
-    width: 100%;
-    height: 200px;
+.panel img {
+  width: 100%;
+  height: inherit;
 }
-.danhSach{
-    text-decoration: none;
-    margin-top: 10px;
-    position: absolute;
-    bottom: 10%;
-    left: 45%;
+.danhSach {
+  text-decoration: none;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
 }
-.danhSach ul{
-    display: inline-block;
-    padding: 10px;
-    list-style: none;
+.danhSach ul {
+  display: inline-block;
+  padding: 10px;
+  list-style: none;
 }
-.danhSach ul li{
-    display: inline-block;
-    margin: 0 5px;
-    width: 20px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
+.danhSach ul li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.danhSach ul li:active{
-    background-color: black;
+.danhSach ul li:active {
+  background-color: black;
 }
-.mail{
-    text-align: center;
-    background-color: #f2c926;
-    /* justify-content: center; */
-    /* align-items: center; */
-    display: block;
-    width: 1080px;
-    height: 900px;
+.mail {
+  text-align: center;
+  background-color: #f2c926;
+  /* justify-content: center; */
+  /* align-items: center; */
+  display: block;
+  width: 1080px;
+  height: 500px;
 }
-.mail-content{
-    position: absolute;
-    text-align: left;
-    left: 13%;
-    width: 70%;
-    height: 68%;
-    background-color: #fff;
-    border-radius: 10px;
+.mail-content {
+  position: absolute;
+  text-align: left;
+  left: 13%;
+  width: 70%;
+  height: 68%;
+  background-color: #fff;
+  border-radius: 10px;
 }
