@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HaNoi Univer</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <script src="jquery_new.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bott.min.css">
+    <script src="jq.js"></script>
+    <link rel="stylesheet" href="style.css">
+
     <script>
         $(document).ready(function() {
-            var previousScroll = $(window).scrollTop();
+            var previousScroll = 0;
 
             $(window).scroll(function() {
                 var currentScroll = $(this).scrollTop();
 
                 if (currentScroll > previousScroll) {
-                    $('.header').addClass('scrolled');
+                    $('.navbar-center').css("display","none");
                 } else {
-                    $('.header').removeClass('scrolled');
+                    $('.navbar-center').css("display","flex");
                 }
-                setTimeout(function() {
-                        $('.header').removeClass('scrolled');
-                }, 300);
+                
                 previousScroll = currentScroll;
             });
         });
@@ -104,11 +103,14 @@
                 <li class="menu-item"><a href="#">Đội ngũ giảng viên</a></li>
                 <li class="menu-item"><a href="#">Cựu sinh viên</a></li>
             </ul>
-        </nav>        
+        </nav>  
     </div>
 
-    <div class="container">
-        <h3 class="animated-text"><b>LỄ KỶ NIỆM 25 NĂM THÀNH LẬP KHOA CÔNG NGHỆ THÔNG TIN</b></h3>
+    <div class="container-fluid">
+         
+        <div class="animated-text">
+            <h3 >LỄ KỶ NIỆM 25 NĂM THÀNH LẬP KHOA CÔNG NGHỆ THÔNG TIN</h3>
+        </div>
         <div id="slid">
             <!-- <input type="button" id="flip" value="&lt"> -->
             <div class="panel"><img src="https://media.edunet.vn/Media/News/images/H%E1%BB%8Dc%20ph%C3%AD%20%C4%91%E1%BA%A1i%20h%E1%BB%8Dc%20C%C3%B4ng%20nghi%E1%BB%87p%20H%C3%A0%20N%E1%BB%99i%20-%20HaUI(1).jpg" alt=""></div>
